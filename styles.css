@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sedans:hsl(31, 77%, 52%);
+    --suvs:hsl(184, 100%, 22%);
+    --luxury:hsl(179, 100%, 13%);
+    --backheadbutton: hsl(0, 0%, 95%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backheadbutton);
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    width: 20vw;
+    height: 70vh;
+    padding-left: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-icon img{
+    width: 4vw;
+    height: 5vh;
+}
+
+.card-header {
+    font-family: 'Big Shoulders Display', cursive; 
+    color: var(--backheadbutton);
+    font-size: 20px;
+}
+
+.card-content {
+    color: var(--paragraphs);
+    font-size: 15px;
+    padding-right: 3.7vw;
+    padding-bottom: 60px;
+    line-height: 1.5;
+}
+
+
+#card-1 {
+    background-color: var(--sedans);
+    border-radius: 5px 0 0 5px;
+}
+#card-2 {
+    background-color: var(--suvs);
+}
+#card-3 {
+    background-color: var(--luxury);
+    border-radius: 0 5px 5px 0;
+}
+
+.card-button {
+    margin-bottom: 30px;
+}
+
+.card-button button {
+    border-radius: 20px;
+    padding: 15px 40px;
+    border: none;
+    background-color: var(--backheadbutton);
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+}
+
+#card-1 .card-button button {
+    color: var(--sedans);
+}
+#card-2 .card-button button {
+    color: var(--suvs);
+}
+#card-3 .card-button button {
+    color: var(--luxury);
+}
+
+
+#card-1 .card-button button:hover, #card-2 .card-button button:hover, #card-3 .card-button button:hover {
+    background-color: transparent;
+    color: var(--backheadbutton);
+    outline: 4px solid var(--backheadbutton);
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding-top: 10px;
+    color: var(--luxury);
+}
+.attribution a { 
+    color: var(--suvs); 
+}
+
+@media (max-width: 600px) {
+    main{
+        flex-direction: column;
+    }
+    .card {
+        width: 80vw;
+        height: 400px;
+    }
+}
