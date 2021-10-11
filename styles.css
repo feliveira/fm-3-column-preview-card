@@ -14,20 +14,16 @@
 
 html {
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     background-color: var(--backheadbutton);
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
 
 .card {
     width: 20vw;
@@ -106,7 +102,7 @@ main {
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    padding-top: 10px;
+    padding: 10px 0;
     color: var(--luxury);
 }
 .attribution a { 
@@ -116,9 +112,24 @@ main {
 @media (max-width: 600px) {
     main{
         flex-direction: column;
+        margin-top: 10%;
     }
     .card {
         width: 80vw;
         height: 400px;
+        padding-left: 14%;
+    }
+    .card-icon img{
+        margin-top: 10%;
+        width: 12vw;
+        height: 5vh;
+    }
+    .card-content {
+        padding-right: 3%;
+        margin-right: 30px;
+    }
+
+    #card-1, #card-3 {
+        border-radius: 0;
     }
 }
