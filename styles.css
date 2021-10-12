@@ -23,6 +23,8 @@ html {
 
 main {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .card {
@@ -43,14 +45,14 @@ main {
 .card-header {
     font-family: 'Big Shoulders Display', cursive; 
     color: var(--backheadbutton);
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 .card-content {
     color: var(--paragraphs);
-    font-size: 15px;
+    font-size: 1vw;
     padding-right: 3.7vw;
-    padding-bottom: 60px;
+    padding-bottom: 6vh;
     line-height: 1.5;
 }
 
@@ -67,42 +69,44 @@ main {
     border-radius: 0 5px 5px 0;
 }
 
-.card-button {
-    margin-bottom: 30px;
+.card-button p{
+    font-size: 1vw;
 }
 
-.card-button button {
-    border-radius: 20px;
-    padding: 15px 40px;
+.card-button{
+    text-align: center;
+    border-radius: 2vw;
+    padding: 1.5vh;
     border: none;
     background-color: var(--backheadbutton);
     font-family: 'Lexend Deca', sans-serif;
     cursor: pointer;
+    width: 10vw;
+    margin-bottom: 2vh;
 }
 
-#card-1 .card-button button {
+#card-1 .card-button p {
     color: var(--sedans);
 }
-#card-2 .card-button button {
+#card-2 .card-button p {
     color: var(--suvs);
 }
-#card-3 .card-button button {
+#card-3 .card-button p {
     color: var(--luxury);
 }
 
-
-#card-1 .card-button button:hover, #card-2 .card-button button:hover, #card-3 .card-button button:hover {
-    background-color: transparent;
-    color: var(--backheadbutton);
+.card-button:hover {
+    background: transparent;
     outline: 4px solid var(--backheadbutton);
 }
 
-
+#card-1 .card-button:hover p, #card-2 .card-button:hover p, #card-3 .card-button:hover p {
+    color: var(--backheadbutton);
+}
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 1vw; 
     text-align: center; 
-    padding: 10px 0;
     color: var(--luxury);
 }
 .attribution a { 
@@ -116,7 +120,7 @@ main {
     }
     .card {
         width: 80vw;
-        height: 400px;
+        height: 70vh;
         padding-left: 14%;
     }
     .card-icon img{
@@ -124,12 +128,60 @@ main {
         width: 12vw;
         height: 5vh;
     }
+    .card-header {
+        font-size: 4vw;
+    }
+
     .card-content {
         padding-right: 3%;
         margin-right: 30px;
+        font-size: 4vw;
     }
 
     #card-1, #card-3 {
         border-radius: 0;
+    }
+
+    .card-button {
+        width: 50vw; 
+    }
+
+    .card-button p {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    .card {
+        width: 30vw;
+        height: 50vh;
+        padding-left: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .card-header {
+        font-size: 2vw;
+    }
+
+    .card-content {
+        font-size: 2vw;
+    }
+
+    .card-button {
+        padding: 1vh;
+        width: 20vw 
+    }
+
+    .card-button p {
+        font-size: 2vw;
+    }
+}
+
+@media (width: 1024px) {
+    .card{
+        height: 80vh;
     }
 }
